@@ -246,7 +246,10 @@
 
   .cv-nav {
     padding: 15px 5%;
-    position: relative; /* Necessary for absolute positioning of the ul */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /*position: relative; /* Necessary for absolute positioning of the ul */
   }
 
   /* 3. HERO SECTION ADJUSTMENTS */
