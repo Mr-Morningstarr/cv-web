@@ -27,6 +27,26 @@
 .cv-nav a:hover {
   color: rgb(52, 152, 219);
 }
+/* HAMBURGER MENU STYLING */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-toggle span {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(255, 255, 255); /* White lines to match your nav */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
 
 /* 2. HERO SECTION */
 .hero {
@@ -81,6 +101,7 @@
 .experience-section {
  margin-top: 70px;
 }
+
 
 /* 3. SKILLS SECTION (Unified Card Logic) */
 .skills-section {
@@ -182,4 +203,94 @@
   margin-top: 20px;
   width: 100%; /* Makes the button fill the card width for a modern look */
   box-sizing: border-box;
+}
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  /* 1. HAMBURGER MENU BUTTON */
+  .menu-toggle {
+    display: flex; /* Shows only on mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+  }
+
+  .menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  /* 2. NAVIGATION LIST (The Dropdown) */
+  .cv-nav ul {
+    display: none; /* Controlled by JavaScript if/else */
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    background-color: rgb(44, 62, 80);
+    position: absolute;
+    top: 60px; /* Adjust based on your nav height */
+    left: 0;
+    padding: 20px 0;
+    margin: 0;
+    z-index: 1000;
+  }
+
+  .cv-nav {
+    padding: 15px 5%;
+    position: relative; /* Necessary for absolute positioning of the ul */
+  }
+
+  /* 3. HERO SECTION ADJUSTMENTS */
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  /* 4. BIO SECTION & TEXT */
+  .bio-section {
+    padding: 40px 5%;
+  }
+
+  .bio {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  /* 5. GRID STACKING (Skills, Education, Experience) */
+  .skills-grid {
+    grid-template-columns: 1fr; /* Stacks cards in a single column */
+    gap: 20px;
+    padding: 0 5%;
+  }
+
+  .skill-card {
+    min-height: auto; /* Allows cards to shrink/grow based on content */
+    padding: 25px 15px;
+  }
 }
