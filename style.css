@@ -1,10 +1,19 @@
+:root {
+  --color-dark: rgb(44, 62, 80);
+  --color-accent: rgb(52, 152, 219);
+  --color-accent-dark: rgb(41, 128, 185);
+  --color-bg-light: rgb(233, 232, 229);
+  --color-text-gray: rgb(80, 80, 80);
+  --color-border: rgb(235, 235, 235);
+}
+
 /* 1. NAVIGATION */
 .cv-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 10%;
-  background-color: rgb(44, 62, 80);
+  background-color: var(--color-dark);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -51,7 +60,7 @@
 /* 2. HERO SECTION */
 .hero {
   padding: 80px 10% 60px 10%;
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgb(240, 247, 253) 0%, rgb(255, 255, 255) 100%);
   display: flex;
   /*justify-content: center;*/
 }
@@ -105,7 +114,7 @@
 
 /* 3. SKILLS SECTION (Unified Card Logic) */
 .skills-section {
-  background-color: rgb(233, 232, 229);
+  background-color: rgb(235, 242, 249);
   /* Padding should be INSIDE so the color stays behind the text */
   padding: 60px; 
   margin-top: 30px;
